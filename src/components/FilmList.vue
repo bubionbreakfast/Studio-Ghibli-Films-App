@@ -1,6 +1,7 @@
 <template lang="html">
-  <div class="listWrapper">
+
     <form v-on:submit.prevent>
+      <div class="listWrapper">
       <select
        v-on:change="handelSelect"
        v-model="selectedFilm">
@@ -9,8 +10,8 @@
          :value="film"
          >{{ film.title }}</option>
       </select>
+    </div>
     </form>
-  </div>
 </template>
 
 <script>
@@ -35,12 +36,13 @@ export default {
 
 <style lang="css" scoped>
 .listWrapper {
-    width: 45%;
+    /* width: 45%; */
     height: 550px;
     min-height: 550px;
     overflow-y: scroll;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    display: inline-flex;
   }
 
 </style>
