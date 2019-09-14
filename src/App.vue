@@ -3,12 +3,14 @@
     <h1>Welcome to Studio Ghilbi.. the App</h1>
     <film-list :films="films" />
     <film-detail :film="selectedFilm" />
+    <fav-list :favFilms="favFilms" />
   </div>
 </template>
 
 <script>
 import FilmList from './components/FilmList.vue'
 import FilmDetail from './components/FilmDetail.vue'
+import FavFilms from './components/FavFilms.vue'
 
 import { eventBus } from './main.js'
 
@@ -30,10 +32,14 @@ export default {
     eventBus.$on('selected-film', (film) => {
       this.selectedFilm = film
     })
+    eventBus.$on('fav-list', (film) => {
+      this.favFilms.push(film)
+    })
   },
   components: {
     "film-list": FilmList,
-    "film-detail": FilmDetail
+    "film-detail": FilmDetail,
+    "fav-list": FavFilms
   }
 }
   </script>

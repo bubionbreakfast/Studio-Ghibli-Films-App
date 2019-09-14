@@ -9,19 +9,29 @@
     <!-- <h3>Rt Score: {{ film.people }}</h3> -->
 
     <p>Description: {{ film.description }}</p>
+    <film-fav :film="film" />
   </div>
 </template>
 
 <script>
+
+import AddToFavsButton from './AddToFavsButton.vue'
+import { eventBus } from '../main.js'
+
 export default {
   name: "film-detail",
-  props: ['film']
+  props: ['film'],
+  components: {
+    "film-fav": AddToFavsButton
+  }
+
+
 }
 </script>
 
 <style lang="css" scoped>
 #film-detail {
-  height: 250px;
+  height: 350px;
   width: 45%;
   display: flex;
   flex-wrap: wrap;
