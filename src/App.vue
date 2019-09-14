@@ -2,11 +2,13 @@
   <div id="app">
     <h1>Welcome to Studio Ghilbi.. the App</h1>
     <film-list :films="films" />
+    <film-detail :film="selectedFilm" />
   </div>
 </template>
 
 <script>
 import FilmList from './components/FilmList.vue'
+import FilmDetail from './components/FilmDetail.vue'
 
 import { eventBus } from './main.js'
 
@@ -30,7 +32,8 @@ export default {
     })
   },
   components: {
-    "film-list": FilmList
+    "film-list": FilmList,
+    "film-detail": FilmDetail
   }
 }
   </script>
