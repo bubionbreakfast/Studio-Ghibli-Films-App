@@ -3,16 +3,15 @@
     <h1>Welcome to Studio Ghilbi.. the App</h1>
     <img src="./assets/images.png" />
     <p>Select a film to see details, and add it to your own fav's list</p>
+    <section>
     <div id="content-left">
-    <film-list :films="films" />
-
-  </div>
-  <film-detail :film="selectedFilm" />
-
-  <div id="content-right">
-  <fav-list :favFilms="favFilms" />
-  </div>
-
+      <film-list :films="films" />
+      <film-detail :film="selectedFilm" />
+    </div>
+    <div id="content-right">
+      <fav-list :favFilms="favFilms" />
+    </div>
+  </section>
   </div>
 </template>
 
@@ -51,23 +50,27 @@ export default {
     "fav-list": FavFilms
   }
 }
-  </script>
+</script>
 
-  <style lang="css" scoped>
-    #app {
-      font-family: 'Avenir', Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-align: center;
-      color: #2c3e50;
-      margin-top: 30px;
-    }
+<style lang="css" scoped>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 30px;
+}
 
-    #content-left {
-      height:50px;
-    }
-    #content-right {
-      float: right;
-      width: 45%;
-    }
-  </style>
+section {
+  display: flex;
+}
+
+#content-left {
+  width: 45%;
+}
+#content-right {
+  float: right;
+  width: 45%;
+}
+</style>

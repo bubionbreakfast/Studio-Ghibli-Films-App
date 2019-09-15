@@ -42,7 +42,7 @@ export default {
 }
 #film-detail {
   height: 450px;
-  width: 45%;
+  width: 65%;
   display: flex;
   flex-wrap: wrap;
   border: 1px solid black;
