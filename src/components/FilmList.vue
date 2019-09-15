@@ -7,7 +7,7 @@
        v-on:change="handelSelect"
        v-model="selectedFilm">
         <option disabled value="">Select a Film</option>
-        <option value="">--Select--</option>
+        <option value="Select a Film">--Select--</option>
         <option v-for="film in films"
          :value="film"
          >{{ film.title }}</option>
@@ -40,7 +40,7 @@ export default {
 <style lang="css" scoped>
 section {
   display: flex;
-  /* flex-flow: row; */
+  justify-content: space-around;
 }
 .listWrapper {
     /* width: 45%; */

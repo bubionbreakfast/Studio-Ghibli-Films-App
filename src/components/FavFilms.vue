@@ -1,5 +1,6 @@
 <template lang="html">
   <div id="fav-list-view">
+    <label for="">Your Fav Film List: </label>
     <li v-for="film in favFilms" value="film">{{ film.title }}</li>
   </div>
 </template>
@@ -19,7 +20,8 @@ export default {
   height: 450px;
   width: 45%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   border: 1px dashed black;
   overflow-y: scroll;
   padding: 5px;

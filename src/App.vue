@@ -64,13 +64,14 @@ export default {
 
 section {
   display: flex;
+
 }
 
 #content-left {
-  width: 45%;
+  /* width: 45%; */
 }
 #content-right {
-  float: right;
-  width: 45%;
+  /* float: right; */
+  width: 100%;
 }
 </style>
