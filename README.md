@@ -1,4 +1,4 @@
-# star_wars_app
+# Studio Ghibili Films App
 
 ## Project setup
 ```
